@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
+import Tabs from "./components/tabs";
+import Inheritance from "./components/inheritance";
+import Composition from "./components/composition";
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 className="title">React Composition and Inheritance Demo</h1>
+      <Tabs>
+        <div label="Inheritance">
+          <Inheritance/>
+        </div>
+        <div label="Composition">
+          <Composition/>
+        </div>
+      </Tabs>
     </div>
   );
 }
